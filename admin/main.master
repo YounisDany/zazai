@@ -1,0 +1,394 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="main.master.cs" Inherits="admin_main" %>
+
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"lang="en" dir="rtl">
+<head runat="server">
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>سمارت لالات عد النقود</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- site icon -->
+
+      <link rel="icon" href="images/fevicon.png" type="image/png" />
+      <!-- bootstrap css -->
+      <link rel="stylesheet" href="css/bootstrap.min.css" />
+      <!-- site css 
+      <link rel="stylesheet" href="style-table.css">
+      <link rel="stylesheet" href="style1.css" />-->
+      <link rel="stylesheet" href="style.css" />
+      <!-- responsive css -->
+      <link rel="stylesheet" href="css/responsive.css" />
+      <!-- color css -->
+      <link rel="stylesheet" href="css/colors.css" />
+      <!-- select bootstrap -->
+      <link rel="stylesheet" href="css/bootstrap-select.css" />
+      <!-- scrollbar css -->
+      <link rel="stylesheet" href="css/perfect-scrollbar.css" />
+      <!-- custom css -->
+      <link rel="stylesheet" href="css/custom.css" />
+       <link href="plugins/sweetalert/sweetalert.css" rel="stylesheet" />
+
+
+       <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+             rel="stylesheet"
+             type="text/css" />
+       <style>
+           .button {
+               background-color: #008cba; /* Green */
+               border: none;
+               color: white;
+               padding: 15px 32px;
+               text-align: center;
+               text-decoration: none;
+               display: inline-block;
+               font-size: 16px;
+               margin: 4px 2px;
+               cursor: pointer;
+           }
+
+               .button:disabled {
+                   opacity: 0.5;
+               }
+
+           .hide {
+               display: none;
+           }
+       </style>
+     
+      
+      <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+      <![endif]-->
+
+
+      <style>
+         #socialbdrssliding a{font-family: 'Open Sans', Helvetica, Arial, sans-serif;width: 40px;transition:width 0.4s;-webkit-transition:width 0.4s;-moz-transition:width 0.4s;overflow: hidden;}#socialbdrssliding a:hover{width: 100px;overflow: hidden;}#socialbdrssliding {float: right;position: relative;height: 40px;}#socialbdrssliding ul { margin: 0; }#socialbdrssliding li,#socialbdrssliding li a,#socialbdrssliding li .bdrs-thumb,#socialbdrssliding li .bdrs-title {display: block;position: relative;width: 40px;height: 40px;}#socialbdrssliding li,#socialbdrssliding li a,#socialbdrssliding li .bdrs-title {float: left;width: auto;overflow: hidden;}#socialbdrssliding li a {width: 40px;line-height: 40px;color: #E9E9E9;font-size: 11px;font-weight: bold;text-shadow: 1px 2px 2px #000;text-decoration: none;}#socialbdrssliding li .bdrs-thumb { float: left; }#socialbdrssliding li.bdrs-facebook a { background-color: #3B5998; }#socialbdrssliding li.bdrs-facebook .bdrs-thumb { background: url("http://3.bp.blogspot.com/-5sEQcBjiYjQ/VE1S8fIjoMI/AAAAAAAAcXg/0kqO3wXqzIM/s1600/FACEBOOK.png") no-repeat 0 -40px; }#socialbdrssliding li.bdrs-gplus a { background-color: #d94a39; }#socialbdrssliding li.bdrs-gplus .bdrs-thumb { background: url("http://2.bp.blogspot.com/-qDVgmgp3_Eo/VE1TJ_gjX1I/AAAAAAAAcXo/ZbtVqnxMiP4/s1600/googleplus.png") no-repeat 0 -40px; }#socialbdrssliding li.bdrs-twitter a { background-color: #3CF; }#socialbdrssliding li.bdrs-twitter .bdrs-thumb { background: url("http://2.bp.blogspot.com/-wCHSN_3dksc/VE1TW_L8deI/AAAAAAAAcXw/hH-n_GApXmo/s1600/TWITTER.png") no-repeat 0 -40px; }#socialbdrssliding li.bdrs-rss a { background-color: #F88F16; }#socialbdrssliding li.bdrs-rss .bdrs-thumb { background: url("http://1.bp.blogspot.com/-qyRlRA4baBs/VE1TqHrZLjI/AAAAAAAAcX4/gxJvtjLeZYg/s1600/rssbd.png") no-repeat 0 -40px; }#socialbdrssliding li.bdrs-youtube a { background-color: #BD3518; }#socialbdrssliding li.bdrs-youtube .bdrs-thumb { background: url("http://4.bp.blogspot.com/-5dmv67RI4_E/VE1UDwXRpyI/AAAAAAAAcYA/TjjFwzLNpBk/s1600/youtube.png") no-repeat 0 -40px; }#socialbdrssliding li.bdrs-facebook a:hover, #socialbdrssliding li.bdrs-youtube a:hover, #socialbdrssliding li.bdrs-rss a:hover, #socialbdrssliding li.bdrs-twitter a:hover, #socialbdrssliding li.bdrs-gplus a:hover {background-color:#666;}
+         
+         
+       
+
+
+ .table1{
+  border-collapse: collapse;
+  border-spacing: 0px;
+  
+}
+ .table1 td ,th{
+  border: 2px solid #dee2e6;
+  margin: 0px;
+  width: 500px;
+}
+.table1 th{
+   text-align: right;
+    padding-top: 10px;
+    background-color: #5cbf92;
+    color: white;
+  
+
+}
+
+
+ .table1 div {
+  resize:horizontal;
+  overflow: auto;
+  width: 300px;
+  height: 200px;
+  margin: 0px;
+  padding: 0px;
+  border: 1px solid black;
+  
+
+
+}
+
+ .table1 td  div {
+  border: 0;
+  width: auto;
+  height: auto;
+  min-height: 40px;
+  min-width: 80px;
+  padding: 10px;
+}
+ .table1 th div {
+  border: 0;
+  width: 170px;
+  height: 30px;
+  min-height: 20px;
+  min-width: 80px;
+  padding-right: 10px;
+ 
+ 
+}
+.form-group{
+
+   margin-bottom:3rem;
+}
+
+
+</style>
+
+
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body class="dashboard dashboard_1">
+
+    <form id="form1" runat="server">
+    <div>
+
+         <div class="full_container">
+        <div class="inner_container">
+        
+                 <!-- Sidebar  -->
+            <nav id="sidebar">
+                <div class="sidebar_blog_1">
+                    <div class="sidebar-header">
+                        <div class="sidebar-header">
+                            <div class="logo_section">
+                                <a href="#"></a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="sidebar_user_info">
+                        <div class="icon_setting"></div>
+                        <div class="user_profle_side">
+                            <div class="user_img"></div>
+                            <div class="user_info">
+                                <h6>سمارت</h6>
+                                <p><span class="online_animation"></span> متصل</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+                <div class="sidebar_blog_2">
+
+
+                    <ul class="list-unstyled components">
+
+                        <!--
+                         <li>
+                            <a href="#laptop" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-desktop purple_color"></i> <span>   الصفحة الرئيسية </span></a>
+                            <ul class="collapse list-unstyled" id="laptop">
+                               <li><a href=""><i class="fa fa-caret-left"></i><span> إدارة الصور </span></a></li>
+
+                               <li><a href=""><i class="fa fa-caret-left"></i><span>إدارة الاكسسوارات</span></a></li>
+
+
+
+                            </ul>
+                         </li>-->
+
+
+
+
+
+                        <li>
+                            <a href="../Default.aspx" aria-expanded="false"><i class="fa fa-home"></i> <span>   الصفحة الرئيسية </span></a>
+
+                        </li>
+
+
+
+                            <li>
+                            <a href="addproduct.aspx"  aria-expanded="false"><i class="fa fa-plus"></i> <span>اضافة منتج</span></a>
+                        </li>
+
+
+
+                        
+                  
+
+
+
+
+                           <li>
+                            <a href="show_product.aspx"  aria-expanded="false"><i class="fa fa-eye"></i> <span>قائمة المنتجات </span></a>
+                        </li>
+                          
+
+                       
+
+                        
+                          <li>
+                            <a href="Updatepassword.aspx"  aria-expanded="false"><i class="fa fa-key"></i> <span>   تعديل كلمة المرور </span></a>
+
+                        </li>
+
+
+                 
+
+
+
+                      
+                          
+
+
+
+
+                     
+
+
+
+
+
+
+
+
+                       
+
+
+
+                   
+
+
+
+
+                  
+
+                     
+
+
+
+
+
+
+                        <!--
+
+                        /****************************************************/
+                        <li><a href=""><i class="fa fa-bank purple_color2"></i> <span>الشركات</span></a></li>
+                                             <li>
+                                                <a href="#apps" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-users blue2_color"></i> <span>العملاء</span></a>
+                                                <ul class="collapse list-unstyled" id="apps">
+                                                   <li><a href="">> <span>Email</span></a></li>
+                                                   <li><a href="">> <span>Calendar</span></a></li>
+                                                   <li><a href="">> <span>Media Gallery</span></a></li>
+                                                </ul>
+                                             </li>
+                                             <li><a href=""><i class="fa fa-credit-card"></i> <span>البيع والشراء</span></a></li>
+
+                                             <li class="active">
+                                                <a href="#additional_page" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-folder-open-o yellow_color"></i> <span>الحسابات</span></a>
+                                                <ul class="collapse list-unstyled" id="additional_page">
+                                                   <li>
+                                                      <a href="">> <span>Profile</span></a>
+                                                   </li>
+                                                   <li>
+                                                      <a href="p">> <span>Projects</span></a>
+                                                   </li>
+                                                   <li>
+                                                      <a href="">> <span>Login</span></a>
+                                                   </li>
+                                                   <li>
+                                                      <a href="">> <span>404 Error</span></a>
+                                                   </li>
+                                                </ul>
+                                             </li>
+                                             <li><a href=""><i class="fa fa-map purple_color2"></i> <span>الماليات</span></a></li>
+                                             <li><a href="l"><i class="fa fa-bank green_color"></i> <span>العمليات البنكية</span></a></li>
+                                             <li><a href=""><i class="fa fa-users blue2_color"></i> <span>الموظفين</span></a></li>
+                                             <li><a href=""><i class="fa fa-compress"></i> <span>المستثمرين</span></a></li>
+                                             <li><a href=""><i class="fa fa-cog yellow_color"></i> <span>الخزنة والأرباح</span></a></li>
+                                             <li><a href=""><i class="fa fa-users blue2_color"></i> <span>المستخدمين</span></a></li>
+                                             <li><a href=""><i class="fa fa-cog yellow_color"></i> <span>الاعدادات</span></a></li>
+                                          </ul>
+                                       </div>-->
+            </nav>
+
+            <!-- end sidebar -->
+
+
+
+                        <div id="content">
+                <!-- topbar -->
+                <div class="topbar">
+
+
+                    <nav class="navbar navbar-expand-lg navbar-light">
+                        <div class="full">
+                            <button type="button" id="sidebarCollapse" class="sidebar_toggle"><i class="fa fa-bars"></i></button>
+                            <div class="logo_section">
+                                <h4>  لوحة التحكم</h4>
+                            </div>
+                            <!-- <div class="right_topbar">
+                                    <div class="icon_info">
+                                      <ul>
+                                          <li><a href="#"><i class="fa fa-bell-o"></i><span class="badge">2</span></a></li>
+                                          <li><a href="#"><i class="fa fa-question-circle"></i></a></li>
+                                          <li><a href="#"><i class="fa fa-envelope-o"></i><span class="badge">3</span></a></li>
+                                       </ul>
+                                       <ul class="user_profile_dd">
+                                          <li>
+                                             <a class="dropdown-toggle" data-toggle="dropdown"><img class="img-responsive rounded-circle" src="images/layout_img/user_img.jpg" alt="#" /><span class="name_user"> مدير النظام</span></a>
+                                             <div class="dropdown-menu">
+
+                                                <a class="dropdown-item" href="#"><span>تسجيل الخروج</span> <i class="fa fa-sign-out"></i></a>
+                                             </div>
+                                          </li>
+                                       </ul>
+                                    </div>
+                                 </div>-->
+                        </div>
+                    </nav>
+
+
+                </div>
+                <!-- end topbar -->
+
+
+
+
+
+
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+
+
+</div>
+            </div>
+             </div>
+
+    </div>
+    </form>
+
+
+
+
+
+    
+            <script src="plugins/sweetalert/jquery.sweet-alert.custom.js"></script>
+            <script src="plugins/sweetalert/sweetalert.min.js"></script>
+            <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js" type="text/javascript"></script>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+
+
+
+      <script src="js/perfect-scrollbar.min.js"></script>
+            <script>
+                var ps = new PerfectScrollbar('#sidebar');
+            </script>
+            <!-- custom js -->
+            <script src="js/custom.js"></script>
+            <script src="js/chart_custom_style1.js"></script>
+
+
+            <script src="function.js"></script>
+
+
+
+</body>
+</html>
